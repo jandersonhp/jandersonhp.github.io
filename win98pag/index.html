@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Janderson - Página Pessoal</title>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
+  <style>
+    body {
+      background: teal;
+      padding: 50px;
+      font-family: sans-serif;
+    }
+    .desktop {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .window {
+      width: 300px;
+    }
+    .avatar {
+      width: 100%;
+      height: auto;
+      border: 2px inset #fff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="desktop">
+    <!-- Janela de Foto -->
+    <div class="window" style="z-index: 2;width: 173px">
+      <div class="title-bar">
+        <div class="title-bar-text">Foto</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimizar"><span style="position: relative;top: -2px">_</span></button>
+          <button aria-label="Maximizar"><span style="position: relative;top: -1px">□</span></button>
+          <button aria-label="Fechar"><span style="position: relative;top: -1px">x</span></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <img src="assets/minhafoto.jpg" style="width: 150px;" class="avatar">
+      </div>
+    </div>
+
+    <!-- Janela de Informações -->
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Sobre mim</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimizar"><span style="position: relative;top: -2px">_</span></button>
+          <button aria-label="Maximizar"><span style="position: relative;top: -1px">□</span></button>
+          <button aria-label="Fechar"><span style="position: relative;top: -1px">x</span></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p><strong>Nome:</strong> Janderson Duarte</p>
+        <p><strong>Cursando:</strong> CST em Análise e Desenv. de Softwares</p>
+        <p><strong>Objetivo:</strong> Dev. Backend Java</p>  
+        <section>
+          <br>
+          <button><a href="https://www.linkedin.com/in/jandersonduarteabr/" style="text-decoration: none; color: inherit;">LinkedIn</a></button>
+          <button><a href="https://github.com/jandersonhp" style="text-decoration: none; color: inherit;">GitHub</a></button>
+          <button><a href="https://instagram.com/jandao1403" style="text-decoration: none; color: inherit;">Instagram</a></button>
+        </section>
+      </div>
+    </div>
+
+    <!-- Janela de Projetos -->
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Projetos</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimizar"><span style="position: relative;top: -2px">_</span></button>
+          <button aria-label="Maximizar"><span style="position: relative;top: -1px">□</span></button>
+          <button aria-label="Fechar"><span style="position: relative;top: -1px">x</span></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul>
+          <br>
+          <li><a href="https://github.com/jandersonhp/BNavalCrypto" style="color: inherit;">🔐 BNaval - Encriptador de Textos</a></li>
+          <br>
+          <li><a href="https://github.com/jandersonhp/ExtratoCarteiraBot" style="color: inherit;">🤖 ExtratoCarteira - Bot de Telegram </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
