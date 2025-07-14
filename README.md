@@ -1,4 +1,4 @@
-# GitHub Pages – jandersonhp.github.io
+# GitHub Pages
 
 Repositório criado apenas para testes com layouts em GitHub Pages.
 
