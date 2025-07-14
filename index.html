@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Adwaita Dark</title>
+  <link rel="icon" href="assets/terminalfavicon.png" type="image/x-icon">
+  <style>
+    body {
+      background: #1e1e1e;
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .terminal-adwaita {
+      background: #2e3436;
+      color: #eeeeec;
+      width: 90vw;
+      max-width: 800px;
+      height: 80vh;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #555753;
+      overflow: hidden;
+    }
+
+    .terminal-header {
+      background: #3c3f41;
+      padding: 8px 12px;
+      font-weight: bold;
+      border-bottom: 1px solid #2e3436;
+      color: #d3d7cf;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .window-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-buttons span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .btn-close { background: #cc575d; }
+    .btn-minimize { background: #d6b04d; }
+    .btn-maximize { background: #6fc877; }
+
+    .terminal-body {
+      padding: 16px;
+      flex-grow: 1;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.4;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+      font-weight: bold;
+      color: #eeeeec;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-adwaita">
+    <div class="terminal-header">
+      <div class="window-buttons">
+        <span class="btn-close"></span>
+        <span class="btn-minimize"></span>
+        <span class="btn-maximize"></span>
+      </div>
+      <span>jandersonhp@terminal:~</span>
+    </div>
+    <pre class="terminal-body">
+jandersonhp@terminal:~$ ls -la
+total 32
+drwxr-xr-x 2 user user 4096 Jul  3 09:00 .
+drwxr-xr-x 3 user user 4096 Jul  9 18:20 ..
+-rw-r--r-- 1 user user  220 Jul 10 09:00 <a href="win98pag/" style="color: inherit">win98pag</a>
+jandersonhp@terminal:~$ <span class="cursor">█</span>
+    </pre>
+  </div>
+
+</body>
+</html>
