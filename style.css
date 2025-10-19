@@ -1,0 +1,100 @@
+body {
+  background: #1e1e1e;
+  margin: 0;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.terminal-adwaita {
+  background: #2e3436;
+  color: #eeeeec;
+  width: 90vw;
+  max-width: 800px;
+  height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #555753;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #3c3f41;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #2e3436;
+  color: #d3d7cf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.window-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn-close { background: #cc575d; }
+.btn-minimize { background: #d6b04d; }
+.btn-maximize { background: #6fc877; }
+
+.terminal-body {
+  padding: 16px;
+  flex-grow: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  font-weight: bold;
+  color: #eeeeec;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .terminal-adwaita {
+    width: 95vw;
+    height: 75vh;
+    font-size: 14px;
+  }
+
+  .terminal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .window-buttons {
+    gap: 4px;
+  }
+
+  .terminal-body {
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+}
