@@ -1,35 +1,475 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Terminal - Jandersonhp</title>
-  <link rel="icon" href="assets/terminalfavicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janderson Duarte · Desenvolvedor Full Stack</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
 <body>
+    <div class="app">
+        <!-- Sidebar / Navegação -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar" id="profileAvatar">
+                    <img src="./assets/picture.png" alt="Janderson Duarte">
+                </div>
+                <h2>Janderson Duarte</h2>
+                <p class="role">Full Stack Developer <BR>
+Backend & Data Enthusiast</p>
+                <p class="location">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Brasil
+                </p>
+                <div class="tech-tags">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>PostgreSQL</span>
+                
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <button class="nav-item active" data-view="about">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Sobre</span>
+                </button>
+                <button class="nav-item" data-view="frontend">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>Front-end</span>
+                </button>
+                <button class="nav-item" data-view="backend">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </svg>
+                    <span>Back-end</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="contact-btn" id="contactButton">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Copiar e-mail</span>
+                </button>
+            </div>
+        </aside>
 
-  <div class="terminal-adwaita">
-    <div class="terminal-header">
-      <div class="window-buttons">
-        <span class="btn-close"></span>
-        <span class="btn-minimize"></span>
-        <span class="btn-maximize"></span>
-      </div>
-      <span>jandersonhp@terminal:~</span>
+        <!-- Conteúdo Principal -->
+        <main class="content">
+            <!-- VIEW: SOBRE -->
+            <section class="view active" id="about-view">
+                <div class="content-header">
+                    <h1>Olá, eu sou Janderson 👋</h1>
+                    <p>Desenvolvedor Full Stack em formação.</p>
+                </div>
+                
+                <div class="about-card">
+                    <p>
+                        Atualmente, concilio minha rotina entre <strong>dois empregos</strong> — logística em um centro de distribuição e atendimento em call center — enquanto estudo <strong>Análise e Desenvolvimento de Sistemas</strong> na faculdade. Apesar da rotina intensa, minha paixão por programação me motiva a sempre criar, aprender e evoluir.
+                    </p>
+                    
+                    <p>
+                        Este portfólio é a porta de entrada para meu trabalho, minha paixão e minha jornada na tecnologia. Busco oportunidades para atuar como desenvolvedor e contribuir para soluções digitais que realmente façam diferença.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span>ADS (em andamento)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <span>+10 projetos pessoais</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Estudo diário</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Badge de disponível -->
+                <div class="availability-wrapper">
+                    <span class="availability-badge">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Disponível para oportunidades
+                    </span>
+                </div>
+                
+                <div class="content-header" style="margin-top: 32px;">
+                    <h2 style="font-size: 1.4rem;">Redes e contato</h2>
+                    <p>Onde me encontrar</p>
+                </div>
+                
+                <div class="social-grid">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/jandersonduarteabr/" target="_blank" class="social-card linkedin">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-name">LinkedIn</span>
+                            <span class="social-handle">@jandersonduarteabr</span>
+                        </div>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/jandersonhp" target="_blank" class="social-card github">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.58 0-.287-.01-1.05-.015-2.06-3.338.726-4.042-1.61-4.042-1.61-.546-1.39-1.335-1.76-1.335-1.76-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.306.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.698.83.578C20.565 21.795 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-name">GitHub</span>
+                            <span class="social-handle">/jandersonhp</span>
+                        </div>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a href="mailto:jandersonduarte@yahoo.com.br" class="social-card email" id="emailCard">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-name">Email</span>
+                            <span class="social-handle">jandersonduarte@yahoo.com.br</span>
+                        </div>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/jandao1403/" target="_blank" class="social-card instagram">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-name">Instagram</span>
+                            <span class="social-handle">@jandao1403</span>
+                        </div>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/jyriver/" target="_blank" class="social-card facebook">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-name">Facebook</span>
+                            <span class="social-handle">/jyriver</span>
+                        </div>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- VIEW: FRONT-END -->
+            <section class="view" id="frontend-view">
+                <div class="content-header">
+                    <h1>Projetos Front-end</h1>
+                    <p>Aplicações web com foco em experiência do usuário</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Fretado Tracker -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/fretadotracker.png" alt="Fretado Tracker">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Fretado Tracker</h3>
+                                <div class="project-year">2024</div>
+                            </div>
+                            <p class="project-description">Sistema de acompanhamento em tempo real da rota do fretado, com mapas interativos e notificações.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Leaflet</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://jandersonhp.github.io/fretado-tracker/" target="_blank" class="btn-demo">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <a href="https://github.com/jandersonhp/fretado-tracker" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Detona Ralph -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/detonaralph.png" alt="Detona Ralph">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Detona Ralph</h3>
+                                <div class="project-year">2024</div>
+                            </div>
+                            <p class="project-description">Jogo interativo desenvolvido durante bootcamp, com mecânicas inspiradas no clássico arcade.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Canvas</span>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://bootcamp-rihappyfront.onrender.com/Projetos/detonaralph/index.html" target="_blank" class="btn-demo">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <a href="https://github.com/jandersonhp/Bootcamp-RiHappyFront/tree/main/Projetos/detonaralph" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Memória Emoji -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/memoriaemoji.png" alt="Memória Emoji">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Memória Emoji</h3>
+                                <div class="project-year">2023</div>
+                            </div>
+                            <p class="project-description">Jogo da memória com emojis animados, desenvolvido para treinar lógica e interatividade.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://bootcamp-rihappyfront.onrender.com/Projetos/memoriaemoji/index.html" target="_blank" class="btn-demo">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <a href="https://github.com/jandersonhp/Bootcamp-RiHappyFront/tree/main/Projetos/memoriaemoji" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- VIEW: BACK-END -->
+            <section class="view" id="backend-view">
+                <div class="content-header">
+                    <h1>Projetos Back-end</h1>
+                    <p>Sistemas, APIs e automações</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- BNaval Crypto -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/bnaval.png" alt="BNaval Crypto">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>BNaval Crypto</h3>
+                                <div class="project-year">2024</div>
+                            </div>
+                            <p class="project-description">API para encriptação/decriptação de texto alfanumérico com interface web simples.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Cryptography</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://bnavalcrypto.onrender.com/" target="_blank" class="btn-demo">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <a href="https://github.com/jandersonhp/BNavalCrypto" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Finance Manager -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/financemanager.png" alt="Finance Manager">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Finance Manager</h3>
+                                <div class="project-year">2024</div>
+                            </div>
+                            <p class="project-description">Gerenciador financeiro pessoal com interface desktop em Python, sincronização automática de dados.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>SQLite</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/jandersonhp/finance_manager" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Carteira Bot -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/carteirabot.png" alt="Carteira Bot">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Carteira Bot</h3>
+                                <div class="project-year">2023</div>
+                            </div>
+                            <p class="project-description">Bot para Telegram que monitora entradas e saídas de saldo via comandos simples.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Telegram API</span>
+                                <span>Asyncio</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/jandersonhp/ExtratoCarteiraBot" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Organizador Py -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/organizadorpy.png" alt="Organizador de Arquivos">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Organizador Py</h3>
+                                <div class="project-year">2023</div>
+                            </div>
+                            <p class="project-description">Script em Python que organiza arquivos automaticamente por extensão em pastas específicas.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>OS Module</span>
+                                <span>Automation</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/jandersonhp/OrganizadorArquivosPy" target="_blank" class="btn-code">
+                                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <footer class="content-footer">
+                <p>© 2025 Janderson Duarte · Todos os direitos reservados</p>
+            </footer>
+        </main>
     </div>
-    <pre class="terminal-body">
-jandersonhp@terminal:~$ ls -la
-total 32
-drwxr-xr-x 2 user user 4096 Jul  3 09:00 .
-drwxr-xr-x 3 user user 4096 Jul  9 18:20 ..
-drwxr-xr-- 1 user user 4096 Jul 13 09:00 <a href="win98pag/" style="color: inherit">.win98pag</a>
--rw-r--r-- 1 user user  220 Jul 10 09:00 <a href="https://github.com/jandersonhp/BNavalCrypto" style="color: inherit">.text_encrypt</a>
-drwxr-xr-x 1 user user 4096 Jul 13 18:20 <a href="https://github.com/jandersonhp/ExtratoCarteiraBot" style="color: inherit">.bot_telegram</a>
--rw-r--r-- 1 user user  220 Oct 10 09:00 <a href="https://jandersonhp.github.io/DevlinkJnd/" style="color: inherit">.devLink</a>
 
-jandersonhp@terminal:~$ <span class="cursor">█</span>
-    </pre>
-  </div>
+    <!-- Modal para imagens -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagem expandida">
+        <div class="modal-loading">Carregando...</div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
