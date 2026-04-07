@@ -140,12 +140,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
 
-    // Carrega tema salvo ou do sistema
+    // Carrega tema salvo; se não houver, usa light como padrão
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         html.setAttribute('data-theme', savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        html.setAttribute('data-theme', 'dark');
     }
 
     if (themeToggle) {
