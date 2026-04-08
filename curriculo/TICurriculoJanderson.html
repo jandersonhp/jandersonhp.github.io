@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo - Janderson Duarte</title>
+
+<style>
+@page {
+    margin: 0;
+    size: A4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+:root {
+    --primary: #0f172a;
+    --primary-light: #1f2937;
+    --text: #111827;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --white: #ffffff;
+    --accent: #10b981;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+}
+
+@media print {
+    body { background: transparent; padding: 0; }
+    .page { box-shadow: none; }
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: var(--primary);
+    color: var(--white);
+    padding: 28px 20px;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact-item {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.contact-item a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Skills */
+.skill-group {
+    margin-bottom: 10px;
+}
+
+.skill-group-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.skill-tag {
+    background: rgba(255,255,255,0.15);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+}
+
+/* Languages */
+.language-item {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.language-level {
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+
+/* MAIN */
+.main {
+    padding: 28px;
+}
+
+.main-section {
+    margin-bottom: 22px;
+}
+
+.main-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
+}
+
+/* Text */
+.summary {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.entry {
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 2px solid var(--border);
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.entry-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.entry-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.entry-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.entry-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+/* Projects */
+.project-entry {
+    margin-bottom: 10px;
+}
+
+.project-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-name a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.project-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.project-tech {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="name">Janderson Duarte</div>
+    <div class="subtitle">Desenvolvedor Full Stack</div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-title">Contato</div>
+        <div class="contact-item">📍 Osasco - SP</div>
+        <div class="contact-item">📞 (12) 99678-5062</div>
+        <div class="contact-item">✉️ jandersonduarte@yahoo.com.br</div>
+        <div class="contact-item">🔗 <a href="https://github.com/jandersonhp">github.com/jandersonhp</a></div>
+        <div class="contact-item">🔗 <a href="https://linkedin.com/in/jandersonduarteabr">linkedin.com/in/jandersonduarteabr</a></div>
+    </div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-title">Habilidades</div>
+
+        <div class="skill-group">
+            <div class="skill-group-name">Programação</div>
+            <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">SQL</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-group-name">Ferramentas</div>
+            <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">VS Code</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-group-name">Fundamentos</div>
+            <div class="skill-tags">
+                <span class="skill-tag">POO</span>
+                <span class="skill-tag">APIs REST</span>
+                <span class="skill-tag">ETL</span>
+                <span class="skill-tag">Estruturas de Dados</span>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="sidebar-section">
+    <div class="sidebar-title">Projetos em Destaque</div>
+    <div class="skill-group-name">• Backend</div>
+    <div class="contact-item">
+        🔗 <a href="https://github.com/jandersonhp/crypto-data-pipeline">
+            Data Pipeline (ETL)
+        </a>
+    </div>
+    
+    <div class="contact-item">
+        🔗 <a href="https://github.com/jandersonhp/OrganizadorArquivosPy">
+            OrganizadorArquivosPy
+        </a>
+    </div>
+
+    <div class="contact-item">
+        🔗 <a href="https://github.com/jandersonhp/finance_manager">
+            Finance Manager
+        </a>
+    </div>
+    <br>
+    <div class="skill-group-name">• Frontend</div>
+    <div class="contact-item">
+        🔗 <a href="https://github.com/jandersonhp/fretado-tracker">
+            Fretado Tracker
+        </a>
+    </div>
+    
+    <div class="contact-item">
+        🔗 <a href="https://jandersonhp.github.io/">
+            Portfólio
+        </a>
+    </div>
+
+
+</div>
+<br>
+    <div class="sidebar-section">
+        <div class="sidebar-title">Idiomas</div>
+        <div class="language-item">Português - Nativo</div>
+        <div class="language-item">Inglês - Intermediário</div>
+    </div>
+<br>
+    <div class="sidebar-section">
+        <div class="sidebar-title">Disponibilidade</div>
+        <div class="contact-item">✔ Estágio / Júnior</div>
+        <div class="contact-item">✔ Período integral</div>
+    </div>
+</aside>
+
+
+<!-- MAIN -->
+<main class="main">
+
+<section class="main-section">
+    <h2 class="main-title">Resumo Técnico</h2>
+    <p class="summary">
+        Desenvolvedor com foco em backend, experiência em criação de APIs REST, automação de processos
+        e pipelines de dados (ETL) com Python. Familiaridade com bancos de dados relacionais
+        e versionamento com Git.
+    </p>
+</section>
+
+<section class="main-section">
+    <h2 class="main-title">Objetivo</h2>
+    <p class="summary">
+        Atuar como Desenvolvedor Backend, contribuindo com desenvolvimento de sistemas,
+        automação e soluções orientadas a dados.
+    </p>
+</section>
+
+<section class="main-section">
+    <h2 class="main-title">Experiência Profissional</h2>
+
+    
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">Assistente de Atendimento</span>
+            <span class="entry-date">2025 - Atual</span>
+        </div>
+        <div class="entry-subtitle">Konecta</div>
+        <div class="entry-desc">
+            • Suporte a clientes em canais digitais<br>
+            • Resolução de problemas técnicos e operacionais<br>
+            • Experiência com sistemas e atendimento técnico
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">Assistente de Logística</span>
+            <span class="entry-date">2024 - 2026</span>
+        </div>
+        <div class="entry-subtitle">CDA Carrefour</div>
+        <div class="entry-desc">
+            • Atuação em ambiente com alto volume de processos operacionais<br>
+            • Utilização de sistemas internos para controle de pedidos<br>
+            • Foco em eficiência, organização e cumprimento de prazos
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">Atendente Projecionista</span>
+            <span class="entry-date">2018 - 2020</span>
+        </div>
+        <div class="entry-subtitle">Cine A</div>
+        <div class="entry-desc">
+            • Operação de sistemas de projeção e controle de mídia digital<br>
+            • Configuração de equipamentos e resolução de falhas técnicas
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">Soldado</span>
+            <span class="entry-date">2015 - 2017</span>
+        </div>
+        <div class="entry-subtitle">Exército Brasileiro</div>
+        <div class="entry-desc">
+            • Controle de estoque e uso de sistemas internos<br>
+            • Organização e distribuição de materiais em grande escala
+        </div>
+    </div>
+</section>
+
+<section class="main-section">
+    <h2 class="main-title">Projetos</h2>
+
+    <div class="project-entry">
+        <div class="project-name"><a href="https://github.com/jandersonhp/crypto-data-pipeline">Crypto Data Pipeline</a></div>
+        <div class="project-desc">
+            Pipeline ETL em Python que extrai dados da API CoinGecko, realiza transformação e persiste em PostgreSQL.
+        </div>
+        <div class="project-tech">Python, Pandas, PostgreSQL</div>
+    </div>
+    
+    <div class="project-entry">
+        <div class="project-name"><a href="https://github.com/jandersonhp/finance_manager">Finance Manager</a></div>
+        <div class="project-desc">
+            Gerenciador financeiro pessoal com interface desktop em Python, sincronização automática de dados.
+        </div>
+        <div class="project-tech">Python, Tkinter, Json</div>
+    </div>
+
+</section>
+
+<section class="main-section">
+    <h2 class="main-title">Formação</h2>
+    <div class="entry">
+        <div class="entry-header">
+            <span class="entry-title">Análise e Desenvolvimento de Sistemas</span>
+            <span class="entry-date">2025 - Previsão Término: Jun/2027</span>
+        </div>
+        <div class="entry-subtitle">Faculdade Anhanguera</div>
+        <div class="entry-desc">
+• Desenvolvimento de aplicações web desktop e mobile utilizando Python, Java e JavaScript<br>
+• Levantamento de requisitos e modelagem de sistemas<br>
+• Projeto e manipulação de bancos de dados relacionais<br>
+• Aplicação de metodologias ágeis e qualidade de software
+</div>
+    </div>
+</section>
+
+</main>
+</div>
+</body>
+</html>
