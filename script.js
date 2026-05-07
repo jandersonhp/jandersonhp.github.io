@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             const targetView = this.getAttribute('data-view');
             switchView(targetView);
-
+            
             // Scroll suave para o topo do conteúdo
             document.querySelector('.content').scrollTo({
                 top: 0,
@@ -33,18 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Ativar view baseada na URL ou padrão (Sobre)
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash + '-view')) {
-        switchView(hash);
-    } else {
-        // Ativar Sobre como padrão
-        const sobreBtn = document.querySelector('[data-view="about"]');
-        if (sobreBtn) {
-            switchView('about');
-        }
-    }
     
     // Botão de contato - copiar email
     const contactButton = document.getElementById('contactButton');
